@@ -1,0 +1,16 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "apiServer.js",
+  "scripts": {
+    "apiStart": "node apiServer.js",
+    "htmlStart": "node htmlServer.js"
+  },
+  "author": "rex.sun",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^0.19.1"
+  }
+}
