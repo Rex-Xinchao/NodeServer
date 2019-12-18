@@ -22,7 +22,8 @@ app.use((req, res, next) => {
 });
 
 //将静态文件目录设置为：项目根目录+/public
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/src'));
+app.use('/static', express.static(__dirname + '/public/static'));
 
 Object.keys(proxyConfig).map(key => {
   app.use(key, proxy(proxyConfig[key]));

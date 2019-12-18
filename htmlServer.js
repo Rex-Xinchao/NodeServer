@@ -8,11 +8,8 @@ const PORT = 3300; // 端口号
 
 http.createServer(function (req, res) {
   let pathname = __dirname + '/public' + url.parse(req.url).pathname ;  // 对于文件路径统一处理
-  if ( path.extname(pathname) === '' ) {
-    pathname += 'src/';  // 欲打开文件的目录
-  }
   if ( pathname.charAt(pathname.length - 1) === '/' ) {
-    pathname += 'index.html';  // 默认打开的文件
+    pathname += 'src/index.html';  // 默认打开的文件
   }
   fs.exists(pathname, exists => {
     if ( exists ) {
