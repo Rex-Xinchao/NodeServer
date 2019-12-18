@@ -18,9 +18,8 @@ module.exports = {
       changeOrigin: true,
       ws: true,
       pathRewrite: {
-        "old-path": "new-path",
         "/api": "/api"
       }
     }
   }
-}
+};
